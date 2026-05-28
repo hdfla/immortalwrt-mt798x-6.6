@@ -176,6 +176,7 @@ mediatek_setup_interfaces()
 	xiaomi,redmi-router-ax6000-ubootmod)
 		ucidef_set_interfaces_lan_wan "lan2 lan3 lan4" wan
 		;;
+	sdmc,nr3053|\
 	yvr,x6)
 		ucidef_set_interfaces_lan_wan "lan1 lan2 lan3" wan
 		;;

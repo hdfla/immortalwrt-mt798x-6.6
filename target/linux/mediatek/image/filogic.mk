@@ -2073,6 +2073,22 @@ define Device/ruijie_rg-x60-pro
 endef
 TARGET_DEVICES += ruijie_rg-x60-pro
 
+define Device/sdmc_nr3053
+  DEVICE_VENDOR := SDMC
+  DEVICE_MODEL := NR3053
+  DEVICE_DTS := mt7981-sdmc-nr3053
+  DEVICE_DTS_DIR := ../dts
+  SUPPORTED_DEVICES := sdmc,nr3053
+  UBINIZE_OPTS := -E 5
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  NAND_SIZE := 128m
+  KERNEL_IN_UBI := 1
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += sdmc_nr3053
+
 define Device/sl_3000-emmc
   DEVICE_VENDOR := SL
   DEVICE_MODEL := 3000 eMMC

@@ -110,6 +110,7 @@ platform_do_upgrade() {
 	routerich,ax3000-ubootmod|\
 	ruijie,ew-6000gx-pro-ubootmod|\
 	ruijie,rg-x60-new-ubootmod|\
+	sdmc,nr3053|\
 	tplink,tl-xtr8488|\
 	tplink,wma301-ubootmod|\
 	wirelesstag,zx7981pd-ubootmod|\

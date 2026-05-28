@@ -766,6 +766,7 @@ setup_model()
 	*nokia,ea0326gmp* |\
 	nradio,wt9103 |\
  	Airpi* |\
+	sdmc,nr3053 |\
 	*7981*)
 		MT7981_whnat $num_of_wifi $usbnet
 		;;
