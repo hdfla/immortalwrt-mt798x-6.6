@@ -113,6 +113,7 @@ platform_do_upgrade() {
 	sdmc,nr3053|\
 	tplink,tl-xtr8488|\
 	tplink,wma301-ubootmod|\
+	vht,32x6|\
 	wirelesstag,zx7981pd-ubootmod|\
 	zyxel,ex5601-t0-ubootmod)
 		fit_do_upgrade "$1"

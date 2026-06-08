@@ -2066,7 +2066,7 @@ TARGET_DEVICES += ruijie_rg-x60-pro
 define Device/sdmc_nr3053
   DEVICE_VENDOR := SDMC
   DEVICE_MODEL := NR3053
-  DEVICE_DTS := mt7981-sdmc-nr3053
+  DEVICE_DTS := mt7981b-sdmc-nr3053
   DEVICE_DTS_DIR := ../dts
   SUPPORTED_DEVICES := sdmc,nr3053
   UBINIZE_OPTS := -E 5
@@ -2160,7 +2160,7 @@ define Device/bt_rb300
   BLOCKSIZE := 128k
   PAGESIZE := 2048
   IMAGE_SIZE := 112640k
-  KERNEL_IN_UBI := 1  
+  KERNEL_IN_UBI := 1
   IMAGES += factory.bin
   IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
@@ -2388,6 +2388,21 @@ define Device/unielec_u7981-01-nand
   $(call Device/unielec_u7981-01)
 endef
 TARGET_DEVICES += unielec_u7981-01-nand
+
+define Device/vht_32x6
+  DEVICE_VENDOR := VHT
+  DEVICE_MODEL := 32X6
+  DEVICE_DTS := mt7981b-vht-32x6
+  DEVICE_DTS_DIR := ../dts
+  SUPPORTED_DEVICES := vht,32x6
+  UBINIZE_OPTS := -E 5
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  KERNEL_IN_UBI := 1
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += vht_32x6
 
 define Device/wavlink_wl-wn586x3
   DEVICE_VENDOR := WAVLINK

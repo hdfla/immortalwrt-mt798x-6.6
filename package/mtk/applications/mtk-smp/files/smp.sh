@@ -769,6 +769,7 @@ setup_model()
 	nradio,wt9103 |\
  	Airpi* |\
 	sdmc,nr3053 |\
+	vht,32x6 |\
 	*7981*)
 		MT7981_whnat $num_of_wifi $usbnet
 		;;

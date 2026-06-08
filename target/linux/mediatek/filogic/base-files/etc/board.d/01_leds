@@ -153,9 +153,11 @@ routerich,ax3000-v1)
 	ucidef_set_led_netdev "wan" "wan" "blue:wan" "eth1" "link tx rx"
 	ucidef_set_led_netdev "wan-off" "wan-off" "red:wan" "eth1" "link"
 	;;
-sdmc,nr3053)
+sdmc,nr3053|\
+vht,32x6)
 	ucidef_set_led_default "red" "RED" "red:status" "0"
 	ucidef_set_led_default "green" "GREEN" "green:status" "1"
+	ucidef_set_led_default "blue" "BLUE" "blue:status" "0"
 	;;
 smartrg,sdg-8733|\
 smartrg,sdg-8734)
