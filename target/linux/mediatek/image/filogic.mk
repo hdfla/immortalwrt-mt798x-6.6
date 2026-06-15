@@ -2082,7 +2082,6 @@ define Device/sdmc_nr3053
   UBINIZE_OPTS := -E 5
   BLOCKSIZE := 128k
   PAGESIZE := 2048
-  NAND_SIZE := 128m
   KERNEL_IN_UBI := 1
   DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
